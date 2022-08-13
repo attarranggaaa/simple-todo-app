@@ -6,7 +6,7 @@ const List = () => {
   const { list } = useContext(AppContext);
   return (
     <>
-      <div className="p-5 space-y-5">
+      <div className="md:p-5 p-3 md:space-y-5 space-y-3">
         {list.map((task) => (
           <Task key={task.id} task={task} />
         ))}

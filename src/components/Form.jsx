@@ -5,19 +5,19 @@ import Button from "./Button";
 import Colors from "./Colors";
 
 const Form = () => {
-  const { handleSubmit, update, isEdit } =
-    useContext(AppContext);
+  const { handleSubmit, update, isEdit } = useContext(AppContext);
 
   return (
     <>
-      <div className="p-5 flex space-x-5 border-b-2 border-black">
+      <div className="md:p-5 p-3 flex space-x-3 md:space-x-5 border-b-2 border-black">
         <Input />
+
         {isEdit ? (
           <Button action={update}>Update</Button>
         ) : (
           <Button action={handleSubmit}>Add</Button>
         )}
-        <Colors />
+          <Colors />
       </div>
     </>
   );

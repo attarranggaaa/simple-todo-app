@@ -8,9 +8,9 @@ const Task = ({ task: { id, color, text, complete } }) => {
   return (
     <>
       <div
-        className={`group flex items-center py-3 ${
+        className={`group flex items-center ${
           color === 1 ? "bg-hijau" : color === 2 ? "bg-kuning" : "bg-jingga"
-        } rounded-lg border-black border-2 md:px-10 px-3`}
+        } rounded-lg border-black border-2 md:px-10 p-3`}
       >
         <Checkbox id={id} color={color} check={check} />
 
@@ -20,7 +20,7 @@ const Task = ({ task: { id, color, text, complete } }) => {
           {text}
         </h1>
 
-        <div className="flex space-x-5">
+        <div className="flex space-x-3 md:space-x-5">
           <BsPencil
             onClick={() => edit(text, id)}
             className="w-6 h-6 cursor-pointer"
